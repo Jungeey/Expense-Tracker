@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker System</h1>
+        <p>Manage and track your daily expenses easily.</p>
+
+        <h2>Total Expenses: Rs. {{ "%.2f"|format(total) }}</h2>
+        <h3>Number of Transactions: {{ count }}</h3>
+
+        <a href="/add">Add Expense</a>
+        <a href="/expenses">View Expenses</a>
+    </div>
+</body>
+</html>
